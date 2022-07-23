@@ -26,3 +26,26 @@ function findOdd(A) {
 console.log(findOdd([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5])); // 5
 console.log(findOdd([0,1,0,1,0])); //0
 console.log(findOdd([1,2,9,1,9,9])); //2
+
+// Q3. Create a function which returns the number of 'true' values there are in an array.
+// 配列の中の’true’の数を返す。
+// Note: Return 0 if given an empty array.
+//       All array items are of the type bool(true or false).
+
+function countTrue(arr) {
+    var count = 0;
+    for (var i = 0; i < arr.length; i++) {
+        if(arr[i] === true) {
+            count++;
+        }
+    }
+    return count;
+}
+
+console.log(countTrue([true, false, true, true])); //3
+console.log(countTrue([])); //0
+
+// または、
+const countTrue1 = r => r.filter(Boolean).length;
+console.log(countTrue1([true, false, true, ,true, true])); //4
+console.log(countTrue1([false, true])); //1
