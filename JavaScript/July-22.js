@@ -49,3 +49,5 @@ console.log(countTrue([])); //0
 const countTrue1 = r => r.filter(Boolean).length;
 console.log(countTrue1([true, false, true, ,true, true])); //4
 console.log(countTrue1([false, true])); //1
+
+// Q4.
