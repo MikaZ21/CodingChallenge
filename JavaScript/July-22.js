@@ -50,4 +50,23 @@ const countTrue1 = r => r.filter(Boolean).length;
 console.log(countTrue1([true, false, true, ,true, true])); //4
 console.log(countTrue1([false, true])); //1
 
-// Q4.
+// Q4.Write a function redundant that takes in a string str and returns a function that returns str.
+// Note: function should return a function, not a string.
+
+function redundant(str) {
+    return function() {
+        return str;
+    }
+}
+console.log(redundant);
+
+// または、
+function redundant2(str) {
+    return () => str;
+}
+console.log(redundant2);
+
+// または、
+const redundant3 = str => () => str;
+console.log(redundant3);
+
