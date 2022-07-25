@@ -70,3 +70,27 @@ console.log(redundant2);
 const redundant3 = str => () => str;
 console.log(redundant3);
 
+// Q5. Given an array (or list) of integers, find and return the index of the highest value in the array.
+//     整数の配列で、一番高い数字のインデックスを返す。
+
+const arr = [1, 2, 0, 9, 19, 79];
+const max = Math.max(...arr); // Get the max value in the array. Use the spread operator (...) to unpack the values from the and pass them as multiple.
+const index = arr.indexOf(max); // Call the 'indexOf()' method on the array, passing it the max value.
+                                // Note: It returns the index of the first occurrence of the value in the array or '-1' if the value is not found.
+
+console.log(index);
+
+// To get the indexes of all elements with the max value in the array.
+// Check if the element at that index is the max value, if it is, push the current index to the 'indexes' array.
+
+const arr2 = [3, 5, 8, 100, 20, 100];
+const max2 = Math.max(...arr2);
+const indexes = [];
+
+for ( let i = 0; i < arr2.length; i++) {
+    if (arr2[i] === max2) {
+        indexes.push(i);
+    }
+}
+
+console.log(indexes);
