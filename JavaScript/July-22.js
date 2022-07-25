@@ -94,3 +94,12 @@ for ( let i = 0; i < arr2.length; i++) {
 }
 
 console.log(indexes);
+
+// Q6. Given an array (or list) of integers. Find the largest value and the smallest value in the array and return the difference of the two values.
+
+const the_array = [15, 22, 84, 14, 88, 23];
+const min = Math.min(...the_array); // 14
+const max3 = Math.max(...the_array); //88
+const theDifference = max3 - min; //74
+
+console.log(theDifference); // return 74
